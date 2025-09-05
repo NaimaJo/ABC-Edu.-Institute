@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,16 +23,21 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            
+
             background-color: rgb(173, 145, 107);
         }
 
         .page-section {
             padding: 5rem 0;
-            display: none; /* Initially hide all sections */
+            display: none;
+            /* Initially hide all sections */
         }
 
-        #home-page { display: block; } /* Show home page by default */
+        #home-page {
+            display: block;
+        }
+
+        /* Show home page by default */
 
         .hero-banner {
             background: linear-gradient(rgba(141, 74, 74, 0.7), rgba(0, 0, 0, 0.7)), url(images/reunion.png) center center no-repeat;
@@ -82,13 +88,14 @@
             width: 100%;
             transition: transform 0.3s ease, filter 0.3s ease;
         }
-        
+
         .gallery-img:hover {
             transform: scale(1.05);
             filter: brightness(0.8);
         }
-        
-        .form-control, .btn {
+
+        .form-control,
+        .btn {
             border-radius: 0.75rem;
         }
 
@@ -102,26 +109,29 @@
             border-radius: 0.75rem;
         }
 
-        .about-company-section, .contact-section {
+        .about-company-section,
+        .contact-section {
             background-color: #fff;
             border-radius: 1rem;
             padding: 3rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
-        
+
         .footer {
             background-color: wheat;
             color: var(--dark-color);
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-warning-subtle sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#home-page">ABC Edu. Institute</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -149,12 +159,13 @@
             <div class="hero-banner">
                 <div class="container">
                     <h1 class="display-3 fw-bold mb-4">Empowering Minds, Shaping Futures</h1>
-                    <p class="lead mb-4">Join us on a journey of knowledge and discovery. Our mission is to provide quality education for all.</p>
-                    
+                    <p class="lead mb-4">Join us on a journey of knowledge and discovery. Our mission is to provide
+                        quality education for all.</p>
+
                     <a href="#" class="btn btn-light btn-lg rounded-pill" onclick="showPage('contact')">Enroll Today</a>
                 </div>
             </div>
-              <!-- Head of Institute Section -->
+            <!-- Head of Institute Section -->
             <div class="container my-5">
                 <div class="row align-items-center">
                     <div class="col-lg-5 text-center mb-4 mb-lg-0">
@@ -163,14 +174,17 @@
                     <div class="col-lg-7">
                         <div class="p-4 bg-white rounded shadow-sm">
                             <h2 class="fw-bold text-dark mb-3">A Message from the Head of Institute</h2>
-                            <p class="lead">"Welcome to our institute. We are dedicated to creating a vibrant and inclusive learning environment where every student can achieve their full potential. Our goal is to nurture critical thinkers and compassionate leaders who will make a positive impact on the world."</p>
+                            <p class="lead">"Welcome to our institute. We are dedicated to creating a vibrant and
+                                inclusive learning environment where every student can achieve their full potential. Our
+                                goal is to nurture critical thinkers and compassionate leaders who will make a positive
+                                impact on the world."</p>
                             <p class="fw-bold mb-0">- Dr. Jane Doe</p>
                             <p class="text-muted">Head of Institute</p>
                         </div>
                     </div>
                 </div>
             </div>
-                       <!-- Course Details Section -->
+            <!-- Course Details Section -->
             <div class="container my-5">
                 <h2 class="text-center fw-bold mb-5">Our Popular Courses</h2>
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -180,33 +194,38 @@
                             <img class="p-4" src="images/women1.jpg" class="card-img-top" alt="Computer Science">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold">Computer Science Fundamentals</h5>
-                                <p class="card-text">Learn the basics of programming, data structures, and algorithms to kickstart your tech career.</p>
+                                <p class="card-text">Learn the basics of programming, data structures, and algorithms to
+                                    kickstart your tech career.</p>
                             </div>
                         </div>
-                    </div>         <!-- Course 2 -->
+                    </div> <!-- Course 2 -->
                     <div class="col">
                         <div class="card shadow-sm border-0">
                             <img class="p-4"
-                            src="images/brunette-business-woman-with-wavy-long-hair-blue-eyes-stands-holding-notebook-hands.jpg" class="card-img-top" alt="Business Management">
+                                src="images/brunette-business-woman-with-wavy-long-hair-blue-eyes-stands-holding-notebook-hands.jpg"
+                                class="card-img-top" alt="Business Management">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold">Business Management 101</h5>
-                                <p class="card-text">A comprehensive course on modern business practices, marketing, and financial management.</p>
+                                <p class="card-text">A comprehensive course on modern business practices, marketing, and
+                                    financial management.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Course 3 -->
                     <div class="col">
                         <div class="card shadow-sm border-0">
-                            <img class="p-4" src="images/portrait-confident-young-businessman-with-his-arms-crossed.jpg" class="card-img-top" alt="Graphic Design">
+                            <img class="p-4" src="images/portrait-confident-young-businessman-with-his-arms-crossed.jpg"
+                                class="card-img-top" alt="Graphic Design">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold">Graphic Design & Media</h5>
-                                <p class="card-text">Master the art of visual communication with a focus on design principles and industry-standard tools.</p>
+                                <p class="card-text">Master the art of visual communication with a focus on design
+                                    principles and industry-standard tools.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-                  <!-- Gallery Section -->
+            <!-- Gallery Section -->
             <div class="container my-5">
                 <h2 class="text-center fw-bold mb-5">Student Gallery</h2>
                 <div class="row g-4">
@@ -229,7 +248,8 @@
                         <img src="images/stu-6.jpg" class="img-fluid gallery-img shadow-sm" alt="Student in library">
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
-                        <img src="images/stu-7.jpeg" class="img-fluid gallery-img shadow-sm" alt="Student collaboration">
+                        <img src="images/stu-7.jpeg" class="img-fluid gallery-img shadow-sm"
+                            alt="Student collaboration">
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
                         <img src="images/stu-8.jpg" class="img-fluid gallery-img shadow-sm" alt="Student in lab">
@@ -237,50 +257,70 @@
                 </div>
             </div>
         </div>
-         <!-- About Us Page Section -->
-        <div id="about-page" class="page-section">
-            <div class="container my-5">
-                <h1 class="text-center fw-bold mb-5">About Us</h1>    <!-- Gallery Section -->
-            <div class="container my-5">
-                <h2 class="text-center fw-bold mb-5">Student Gallery</h2>
-                <div class="row g-4">
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="images/stu-3.jpg" class="img-fluid gallery-img shadow-sm" alt="Student in class">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="images/stu-4.jpg" class="img-fluid gallery-img shadow-sm" alt="Student studying">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="images/stu-1.jpg" class="img-fluid gallery-img shadow-sm" alt="Student presentation">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="images/stu-2.jpg" class="img-fluid gallery-img shadow-sm" alt="Student project">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="images/stu-5.jpg" class="img-fluid gallery-img shadow-sm" alt="Student graduation">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="images/stu-6.jpg" class="img-fluid gallery-img shadow-sm" alt="Student in library">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="images/stu-7.jpeg" class="img-fluid gallery-img shadow-sm" alt="Student collaboration">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="images/stu-8.jpg" class="img-fluid gallery-img shadow-sm" alt="Student in lab">
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- About Us Page Section -->
         <div id="about-page" class="page-section">
             <div class="container my-5">
-                <h1 class="text-center fw-bold mb-5">About Us</h1>
-                  <!-- About Company -->
-                <div class="about-company-section mb-5">
-                    <h2 class="fw-bold text-center mb-4">Our Institute's Story</h2>
-                    <p class="lead text-center">Founded in 1998, our institute has been a beacon of academic excellence for over two decades. We believe in a holistic approach to education, focusing not just on academic achievement but also on personal growth, character development, and social responsibility. Our dedicated faculty and innovative curriculum prepare students for the challenges of tomorrow.</p>
+                <h1 class="text-center fw-bold mb-5">About Us</h1> <!-- Gallery Section -->
+                <div class="container my-5">
+                    <h2 class="text-center fw-bold mb-5">Student Gallery</h2>
+                    <div class="row g-4">
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <img src="images/stu-3.jpg" class="img-fluid gallery-img shadow-sm" alt="Student in class">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <img src="images/stu-4.jpg" class="img-fluid gallery-img shadow-sm" alt="Student studying">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <img src="images/stu-1.jpg" class="img-fluid gallery-img shadow-sm"
+                                alt="Student presentation">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <img src="images/stu-2.jpg" class="img-fluid gallery-img shadow-sm" alt="Student project">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <img src="images/stu-5.jpg" class="img-fluid gallery-img shadow-sm"
+                                alt="Student graduation">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <img src="images/stu-6.jpg" class="img-fluid gallery-img shadow-sm"
+                                alt="Student in library">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <img src="images/stu-7.jpeg" class="img-fluid gallery-img shadow-sm"
+                                alt="Student collaboration">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <img src="images/stu-8.jpg" class="img-fluid gallery-img shadow-sm" alt="Student in lab">
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <!-- About Us Page Section -->
+            <div id="about-page" class="page-section">
+                <div class="container my-5">
+                    <h1 class="text-center fw-bold mb-5">About Us</h1>
+                    <!-- About Company -->
+                    <div class="about-company-section mb-5">
+                        <h2 class="fw-bold text-center mb-4">Our Institute's Story</h2>
+                        <p class="lead text-center">Founded in 1998, our institute has been a beacon of academic
+                            excellence for over two decades. We believe in a holistic approach to education, focusing
+                            not just on academic achievement but also on personal growth, character development, and
+                            social responsibility. Our dedicated faculty and innovative curriculum prepare students for
+                            the challenges of tomorrow.</p>
+                    </div>
+  <!-- Staff Profile Section -->
+                <h2 class="text-center fw-bold mb-5">Meet Our Team</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+                    <!-- Staff 1 -->
+                    <div class="col">
+                        <div class="p-4 bg-white rounded shadow-sm h-100">
+                            <img src="images/about us 1.jpg" class="staff-img mb-3" alt="John Smith">
+                            <h5 class="fw-bold mb-0">John Smith</h5>
+                            <p class="text-muted">Head of Faculty, Science</p>
+                            <p class="small text-muted">A dedicated educator with over 15 years of experience in physics and mathematics. He is passionate about making complex topics easy to understand.</p>
+                        </div>
+                    </div>
 
 
 
@@ -291,4 +331,4 @@
 
 
 
-        </main>
+    </main>
