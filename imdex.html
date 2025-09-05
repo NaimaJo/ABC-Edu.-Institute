@@ -3,9 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABC Educational Institute</title>
+    <title>ABC Educational Institute Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            
+            background-color: rgb(173, 145, 107);
+        }
+
+        .page-section {
+            padding: 5rem 0;
+            display: none; /* Initially hide all sections */
+        }
+
+        #home-page { display: block; } /* Show home page by default */
+
+        .hero-banner {
+            background: linear-gradient(rgba(141, 74, 74, 0.7), rgba(0, 0, 0, 0.7)), url(images/reunion.png) center center no-repeat;
+
+            background-size: cover;
+            color: #fff;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+        }
+
+        .card {
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img-top {
+            position: relative;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .staff-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--primary-color);
+        }
+
+        .gallery-img {
+            border-radius: 1rem;
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.8);
+        }
+        
+        .form-control, .btn {
+            border-radius: 0.75rem;
+        }
+
+        .accordion-item {
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(167, 71, 71, 0.05);
+        }
+
+        .accordion-button {
+            border-radius: 0.75rem;
+        }
+
+        .about-company-section, .contact-section {
+            background-color: #fff;
+            border-radius: 1rem;
+            padding: 3rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .footer {
+            background-color: wheat;
+            color: var(--dark-color);
+        }
+    </style>
 </head>
 <body>
-    
-</body>
-</html>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning-subtle sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home-page">ABC Edu. Institute</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('about')">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('contact')">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('faq')">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Sections -->
+    <main>
+        <!-- Home Page Section -->
+        <div id="home-page" class="page-section">
+            <div class="hero-banner">
+                <div class="container">
+                    <h1 class="display-3 fw-bold mb-4">Empowering Minds, Shaping Futures</h1>
+                    <p class="lead mb-4">Join us on a journey of knowledge and discovery. Our mission is to provide quality education for all.</p>
+                    
+                    <a href="#" class="btn btn-light btn-lg rounded-pill" onclick="showPage('contact')">Enroll Today</a>
+                </div>
+            </div>
+              <!-- Head of Institute Section -->
+            <div class="container my-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                        <img src="images/lady.jpg" class="img-fluid rounded-circle shadow-lg" alt="Head of Institute">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="p-4 bg-white rounded shadow-sm">
+                            <h2 class="fw-bold text-dark mb-3">A Message from the Head of Institute</h2>
+                            <p class="lead">"Welcome to our institute. We are dedicated to creating a vibrant and inclusive learning environment where every student can achieve their full potential. Our goal is to nurture critical thinkers and compassionate leaders who will make a positive impact on the world."</p>
+                            <p class="fw-bold mb-0">- Dr. Jane Doe</p>
+                            <p class="text-muted">Head of Institute</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
